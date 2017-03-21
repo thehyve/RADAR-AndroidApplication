@@ -87,8 +87,8 @@ public class DetailMainActivityView implements Runnable, MainActivityView {
         deviceStatusIconMap = new EnumMap<>(DeviceStatusListener.Status.class);
         deviceStatusIconMap.put(DeviceStatusListener.Status.CONNECTED, org.radarcns.R.drawable.status_connected);
         deviceStatusIconMap.put(DeviceStatusListener.Status.DISCONNECTED, org.radarcns.R.drawable.status_disconnected);
-        deviceStatusIconMap.put(DeviceStatusListener.Status.READY, org.radarcns.R.drawable.status_searching);
-        deviceStatusIconMap.put(DeviceStatusListener.Status.CONNECTING, org.radarcns.R.drawable.status_searching);
+        deviceStatusIconMap.put(DeviceStatusListener.Status.READY, org.radarcns.R.drawable.status_bt_searching);
+        deviceStatusIconMap.put(DeviceStatusListener.Status.CONNECTING, org.radarcns.R.drawable.status_bt_searching);
 
         serverStatusIconMap = new EnumMap<>(ServerStatusListener.Status.class);
         serverStatusIconMap.put(ServerStatusListener.Status.CONNECTED, org.radarcns.R.drawable.status_connected);
