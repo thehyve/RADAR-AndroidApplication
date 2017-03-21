@@ -33,6 +33,13 @@
     <style name="NumberColumn" parent="DefaultColumn">
     </style>
 
+    <style name="BatteryValue" parent="DefaultColumn">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:paddingLeft">21dip</item>
+        <item name="android:paddingTop">21dip</item>
+    </style>
+
     <style name="DisabledColumn" parent="DefaultColumn">
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">normal|italic</item>

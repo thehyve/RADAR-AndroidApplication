@@ -275,6 +275,7 @@ public class DetailMainActivityView implements Runnable, MainActivityView {
         private final TextView mAccelerationLabel;
         private final TextView mRecordsSentLabel;
         private final ImageView mBatteryLabel;
+        private final TextView mBatteryValue;
         private final TextView mDeviceNameLabel;
         private final Button mDeviceInputButton;
         private String mInputDeviceKey;
@@ -306,6 +307,7 @@ public class DetailMainActivityView implements Runnable, MainActivityView {
             mRecordsSentLabel = (TextView) row.findViewById(org.radarcns.R.id.recordsSent_label);
             mDeviceNameLabel = (TextView) row.findViewById(org.radarcns.R.id.deviceName_label);
             mBatteryLabel = (ImageView) row.findViewById(org.radarcns.R.id.battery_label);
+            mBatteryValue = (TextView) row.findViewById(R.id.battery_value);
             mDeviceInputButton = (Button) row.findViewById(org.radarcns.R.id.inputDeviceNameButton);
             if (provider.isFilterable()) {
                 mDeviceInputButton.setOnClickListener(new View.OnClickListener() {
@@ -493,6 +495,9 @@ public class DetailMainActivityView implements Runnable, MainActivityView {
             } else {
                 mBatteryLabel.setImageResource(org.radarcns.R.drawable.ic_battery_empty);
             }
+            // If batterylevel is 100%, make it 99% for prettier display
+            float batteryLevelFormatted = batteryLevel == 1 ? batteryLevel*100 - 1 : batteryLevel*100;
+            setText(mBatteryValue, batteryLevelFormatted, "", noDecimals);
         }
 
         public void updateDeviceName() {
