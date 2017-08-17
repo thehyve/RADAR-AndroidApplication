@@ -37,7 +37,7 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.google.firebase:firebase-config:10.2.6'
 
-    compile('org.radarcns:radar-commons-android:0.2')
+    compile('org.radarcns:radar-commons-android:0.2.1')
 
 //    compile 'org.radarcns:radar-android-empatica:0.1-SNAPSHOT@aar'
 //    compile 'com.empatica:empalink:2.1@aar'
