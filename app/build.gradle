@@ -17,7 +17,8 @@ android {
         }
     }
     lintOptions {
-        abortOnError false
+        abortOnError true
+        lintConfig file("lint.xml")
     }
     packagingOptions {
         exclude 'META-INF/ASL2.0'
