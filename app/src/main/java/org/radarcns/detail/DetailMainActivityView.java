@@ -92,7 +92,7 @@ public class DetailMainActivityView implements Runnable, MainActivityView {
         initializeViews();
 
         rows = new ArrayList<>();
-        ViewGroup root = (ViewGroup) activity.findViewById(R.id.deviceTable);
+        ViewGroup root = activity.findViewById(R.id.deviceTable);
         boolean condensed = radarConfiguration.getBoolean(CONDENSED_DISPLAY_KEY, true);
         for (DeviceServiceProvider provider : activity.getConnections()) {
             if (provider.isDisplayable()) {
@@ -146,12 +146,12 @@ public class DetailMainActivityView implements Runnable, MainActivityView {
         mainActivity.setContentView(R.layout.activity_overview);
 
         mServerStatusIcon = mainActivity.findViewById(R.id.statusServer);
-        mServerMessage = (TextView) mainActivity.findViewById(R.id.statusServerMessage);
+        mServerMessage = mainActivity.findViewById(R.id.statusServerMessage);
 
-        mGroupIdInput = (EditText) mainActivity.findViewById(R.id.inputGroupId);
+        mGroupIdInput = mainActivity.findViewById(R.id.inputGroupId);
         mGroupIdInput.setText(userId);
-        mPasswordInput = (EditText) mainActivity.findViewById(R.id.inputPassword);
-        mLoginButton = (Button) mainActivity.findViewById(R.id.loginButton);
+        mPasswordInput = mainActivity.findViewById(R.id.inputPassword);
+        mLoginButton = mainActivity.findViewById(R.id.loginButton);
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -160,7 +160,7 @@ public class DetailMainActivityView implements Runnable, MainActivityView {
         });
 
         mFirebaseStatusIcon = mainActivity.findViewById(R.id.firebaseStatus);
-        mFirebaseMessage = (TextView) mainActivity.findViewById(R.id.firebaseStatusMessage);
+        mFirebaseMessage = mainActivity.findViewById(R.id.firebaseStatusMessage);
     }
 
     @Override

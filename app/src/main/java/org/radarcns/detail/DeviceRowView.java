@@ -108,13 +108,13 @@ public class DeviceRowView {
         TableRow row = (TableRow) root.getChildAt(root.getChildCount() - 1);
 
         mStatusIcon = row.findViewById(R.id.status_icon);
-        mTemperatureLabel = (TextView) row.findViewById(R.id.temperature_label);
-        mHeartRateLabel = (TextView) row.findViewById(R.id.heartRate_label);
-        mAccelerationLabel = (TextView) row.findViewById(R.id.acceleration_label);
-        mDeviceNameLabel = (TextView) row.findViewById(R.id.deviceName_label);
-        mBatteryLabel = (ImageView) row.findViewById(R.id.battery_label);
-        mBatteryValue = (TextView) row.findViewById(R.id.battery_value);
-        mDeviceInput = (Button) row.findViewById(R.id.inputDeviceButton);
+        mTemperatureLabel = row.findViewById(R.id.temperature_label);
+        mHeartRateLabel = row.findViewById(R.id.heartRate_label);
+        mAccelerationLabel = row.findViewById(R.id.acceleration_label);
+        mDeviceNameLabel = row.findViewById(R.id.deviceName_label);
+        mBatteryLabel = row.findViewById(R.id.battery_label);
+        mBatteryValue = row.findViewById(R.id.battery_value);
+        mDeviceInput = row.findViewById(R.id.inputDeviceButton);
 
         if (provider.isFilterable()) {
             mDeviceInput.setOnClickListener(new View.OnClickListener() {
